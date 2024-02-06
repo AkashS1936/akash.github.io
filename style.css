@@ -1,0 +1,190 @@
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-attachment: fixed;
+    padding-top: 50px;
+    background-repeat: no-repeat;
+    
+}
+
+#image {
+ 
+  margin-top: 0;
+  margin-right: 10%;
+  float:right;
+  height: 450px;
+  width: 400px;
+}
+
+
+#logo {
+    width: 1000px;
+    height: 450px;
+    z-index: -1;
+    position: absolute;
+    text-align: center;
+}
+
+.intro{
+    border-left: 20px;
+}
+.navigation_bar{
+    padding:10px ;
+    display: flex;
+    flex-direction: row;
+    column-gap:100px ;
+    position: fixed;
+    flex-wrap: nowrap;
+    background-color: gray;
+    width: 100%;
+    
+   
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr;
+    grid-template-rows: 300px 300px ;
+    padding-left: 10%;
+    row-gap: 50px;
+    column-gap: 25px;
+}
+
+.row{grid-column: span 2;}
+
+.item1{background-color: aqua;}
+.item2{background-color: pink;}
+
+
+footer{
+    text-align: center;
+    font-size: 100px;
+    clear: right;
+}
+
+#blog-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#like-button{
+    font-size: 20px;
+}
+
+#comment-section {
+    margin-top: 20px;
+}
+
+#comment-input {
+    width: 70%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#comment-button {
+    padding: 5px 10px;
+}
+
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+.change-mode{
+    float: right;
+    margin-top: -9%;
+
+   
+}
+
+
+#changing-theme{
+    width: 100px;
+    height: 80px;
+    padding-top:70%;
+}
+
+#skills {
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border:1px solid black;
+    padding: 30px;
+  }
+
+  .table-container{
+      overflow-x: auto;
+  }
+
+@media only screen and (max-width: 800px) {
+    .navigation_bar {
+        flex-direction: column;
+        align-items: flex-start;
+        top: 0%;
+        background: none;
+    }
+    
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: black;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+
+}
